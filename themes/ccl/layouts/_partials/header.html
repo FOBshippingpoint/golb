@@ -1,0 +1,27 @@
+<a class="site-title" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+<div class="site-toolbar">
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  <select aria-label="Change Language" onchange="window.location.href = this.value">
+    {{ $currentLang := .Language.Lang }}
+    {{ $page := . }}
+    {{ range site.Languages }}
+      {{ $lang := .Lang }}
+      {{ $href := "" }}
+      {{ range $page.AllTranslations }}
+        {{ if eq .Language.Lang $lang }}
+          {{ $href = .RelPermalink }}
+        {{ end }}
+      {{ end }}
+      {{ if not $href }}
+        {{ range site.Home.AllTranslations }}
+          {{ if eq .Language.Lang $lang }}
+            {{ $href = .RelPermalink }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      <option value="{{ $href }}" {{ if eq $lang $currentLang }}selected{{ end }}>
+        {{ .Label }}
+      </option>
+    {{ end }}
+  </select>
+</div>

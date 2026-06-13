@@ -1,0 +1,53 @@
+baseURL = 'https://fobshippingpoint.github.io/golb/'
+theme = 'ccl'
+defaultContentLanguage = 'en'
+disableDefaultLanguageRedirect = true
+disableKinds = ['sitemap']
+
+[menus]
+  [[menus.main]]
+    identifier = 'home'
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    identifier = 'posts'
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 20
+
+  [[menus.main]]
+    identifier = 'about'
+    name = 'About'
+    pageRef = '/about'
+    weight = 30
+
+  [[menus.main]]
+    identifier = 'tags'
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 40
+
+[markup.goldmark.parser.attribute]
+block = true
+title = true
+
+[markup.goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[languages]
+[languages.en]
+label = 'English'
+locale = 'en-US'
+title = "CC Lan's Blog"
+weight = 1
+[languages.zh-TW]
+label = '繁體中文'
+locale = 'zh-TW'
+title = "CC Lan的部落格"
+weight = 2
+hasCJKLanguage = true

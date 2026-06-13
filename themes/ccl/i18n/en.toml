@@ -1,0 +1,7 @@
+home = 'Home'
+about = 'About'
+posts = 'Posts'
+tags = 'Tags'
+recentPosts = 'Recent posts'
+noPosts = 'No posts yet.'
+noTerms = 'No terms yet.'
