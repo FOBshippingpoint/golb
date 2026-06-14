@@ -33,10 +33,12 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: ./Containerfile
+          file: ./Dockerfile
           target: final
           push: false
           outputs: type=local,dest=./public
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:

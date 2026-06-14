@@ -3,8 +3,6 @@ FROM ghcr.io/gohugoio/hugo:v0.163.1 AS build
 
 WORKDIR /app
 
-USER root
-
 COPY . .
 
 RUN --mount=type=cache,sharing=locked,target=/hugo_cache \
