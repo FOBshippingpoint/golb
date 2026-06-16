@@ -1,14 +1,13 @@
----
-title: "AsciiDoc—Markdown以外的選擇"
-date: 2024-04-12T01:20:38+08:00
-tags: ["asciidoc", "markdown"]
-categories:
-draft: false
++++
+title = "AsciiDoc—Markdown以外的選擇"
+date = 2024-04-12T01:20:38+08:00
+tags = ["asciidoc", "markdown"]
+categories = []
+draft = false
+summary = "Battery-included Markup Language"
++++
 
----
 Markdown這種可讀性高又能轉譯成HTML的格式近年來相當受到歡迎，從GitHub README[^1]的`.md`格式佔比就可知道他的火紅程度，甚至打破程設領域擴散到筆記的世界，如[HackMD](https://hackmd.io/)、[Obsidian](https://obsidian.md/)甚至[Notion](https://www.notion.so/)全都看得見Markdown的影子，許許多多書本、文檔都是由Markdown在背後支撐，但是有天我在寫Markdown時想到「可以把圖片置中嗎？」
-
-<!--more-->
 
 ...
 
