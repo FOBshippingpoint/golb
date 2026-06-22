@@ -4,6 +4,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}/favicon-16x16.png">
 <link rel="manifest" href="{{ .Site.BaseURL }}/site.webmanifest">
+{{- range .AlternativeOutputFormats }}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}" title="{{ .Name }}">
+{{ end -}}
 <script data-goatcounter="https://fobshippingpoint-golb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
