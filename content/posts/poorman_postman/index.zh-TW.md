@@ -6,6 +6,10 @@ tags = ['postman', 'shell']
 summary = 'shell+curl的極簡主義Postman縫合怪'
 +++
 
+> 2026-11-11追記
+>
+> [最近Postman出了個包](https://web.archive.org/web/20261103172342/https://github.com/postmanlabs/postman-app-support/issues/14370)，預設自動安裝Codex/Claude的hook，會把你的機密資料送到他們家的伺服器。
+
 對[Postman](https://www.postman.com/)的臃腫忍無可忍的我，用POSIX shell + curl + jq組合出了更可怕的玩意兒：[Poorman](https://github.com/FOBshippingpoint/poorman)
 
 一個簡單的範例：

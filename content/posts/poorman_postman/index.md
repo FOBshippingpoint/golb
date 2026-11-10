@@ -6,6 +6,10 @@ tags = ['postman', 'shell']
 summary = 'Postman alternative built with shell and curl.'
 +++
 
+> 2026-11-11
+>
+> [Postman made some troubles recently](https://web.archive.org/web/20261103172342/https://github.com/postmanlabs/postman-app-support/issues/14370), seems like it will send your data to their server without consent via Codex/Claude hook.
+
 Because of [Postman](https://www.postman.com/)'s bloat, I created something even more terrifying with POSIX shell, curl, and jq: [Poorman](https://github.com/FOBshippingpoint/poorman).
 
 An example:
